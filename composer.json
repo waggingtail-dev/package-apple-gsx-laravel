@@ -1,0 +1,54 @@
+{
+    "name": "waggingtail-dev/package-apple-gsx-laravel",
+    "description": "Laravel integration for Waggingtail's AppleGsx package.",
+    "type": "library",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "naillizard",
+            "email": "diego@waggingtail.co.nz",
+            "homepage": "https://waggingtail.co"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "path",
+            "url": "../package-apple-gsx"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "waggingtail-dev/package-apple-gsx": "dev-master"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^3.7",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Waggingtail\\AppleGsx\\Laravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Waggingtail\\AppleGsx\\Laravel\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Waggingtail\\AppleGsx\\Laravel\\AppleGsxServiceProvider"
+            ],
+            "aliases": {
+                "AppleGsx": "Waggingtail\\AppleGsx\\Laravel\\Facades\\AppleGsx"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
