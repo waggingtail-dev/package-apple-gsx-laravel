@@ -12,13 +12,13 @@
     ],
     "repositories": [
         {
-            "type": "path",
-            "url": "../package-apple-gsx"
+            "type": "vcs",
+            "url": "git@github.com:waggingtail-dev/package-apple-gsx.git"
         }
     ],
     "require": {
         "php": "^7.2",
-        "waggingtail-dev/package-apple-gsx": "dev-master"
+        "waggingtail-dev/package-apple-gsx": "^0.1"
     },
     "require-dev": {
         "orchestra/testbench": "^3.7",
