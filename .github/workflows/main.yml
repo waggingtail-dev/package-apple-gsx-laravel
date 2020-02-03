@@ -10,6 +10,11 @@ jobs:
     steps:
       - uses: actions/checkout@v1
 
+      - uses: webfactory/ssh-agent@v0.2.0
+        with:
+          ssh-private-key: |
+            ${{ secrets.SSH_PRIVATE_KEY }}
+
       - name: cache:vendor
         uses: actions/cache@v1
         id: vendor
