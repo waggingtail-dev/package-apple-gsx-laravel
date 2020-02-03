@@ -26,15 +26,19 @@ class AppleGsxServiceProvider extends ServiceProvider
 
     protected function registerAppleGsx()
     {
-        $this->app->singleton('applegsx', function ($app) {
+        $this->app->singleton('Waggingtail\AppleGsx\AppleGsx', function ($app) {
             $config = $app['config']->get('applegsx');
 
-            $soldTo = $config['sold_to'];
-            $shipTo = $config['ship_to'];
-            $caBundlePath = storage_path($config['ca_bundle_path']);
-            $passPhrase = $config['pass_phrase'];
+            [
+                'sold_to' => $soldTo,
+                'ship_to' => $shipTo,
+                'pass_phrase' => $passPhrase,
+                'use_uat' => $useUat,
+            ] = $config;
 
-            return new AppleGsx($soldTo, $shipTo, $caBundlePath, $passPhrase);
+            $caBundlePath = storage_path($config['ca_bundle_path']);
+
+            return new AppleGsx($soldTo, $shipTo, $caBundlePath, $passPhrase, $useUat);
         });
 
         $this->app->alias('applegsx', AppleGsx::class);
