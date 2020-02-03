@@ -7,6 +7,11 @@ use Waggingtail\AppleGsx\AppleGsx;
 
 class AppleGsxServiceProvider extends ServiceProvider
 {
+    /**
+     * Register package services.
+     *
+     * @return void
+     */
     public function register()
     {
         if (! $this->app->configurationIsCached()) {
@@ -14,9 +19,25 @@ class AppleGsxServiceProvider extends ServiceProvider
         }
 
         $this->registerAppleGsx();
-        $this->offerPublishing();
     }
 
+    /**
+     * Bootstrap package services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        if ($this->app->runningInConsole()) {
+            $this->publishes([
+                __DIR__.'/../config/applegsx.php' => config_path('applegsx.php'),
+            ], 'config');
+        }
+    }
+
+    /**
+     * {@inheritdoc}
+     */
     public function provides()
     {
         return [
@@ -24,6 +45,11 @@ class AppleGsxServiceProvider extends ServiceProvider
         ];
     }
 
+    /**
+     * Register package services.
+     *
+     * @return void
+     */
     protected function registerAppleGsx()
     {
         $this->app->singleton('applegsx', function ($app) {
@@ -42,14 +68,5 @@ class AppleGsxServiceProvider extends ServiceProvider
         });
 
         $this->app->alias('applegsx', AppleGsx::class);
-    }
-
-    protected function offerPublishing()
-    {
-        if ($this->app->runningInConsole()) {
-            $this->publishes([
-                __DIR__.'/../config/applegsx.php' => config_path('applegsx.php'),
-            ], 'apple-config');
-        }
     }
 }
