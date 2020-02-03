@@ -287,16 +287,16 @@
         },
         {
             "name": "waggingtail-dev/package-apple-gsx",
-            "version": "v0.1.4",
+            "version": "v0.1.5",
             "source": {
                 "type": "git",
                 "url": "git@github.com:waggingtail-dev/package-apple-gsx.git",
-                "reference": "671c2b5357be9164d61533c6864c31708a18759e"
+                "reference": "0f6f8abc4d241e9ce6b64992721c8f9837ecce4c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/waggingtail-dev/package-apple-gsx/zipball/671c2b5357be9164d61533c6864c31708a18759e",
-                "reference": "671c2b5357be9164d61533c6864c31708a18759e",
+                "url": "https://api.github.com/repos/waggingtail-dev/package-apple-gsx/zipball/0f6f8abc4d241e9ce6b64992721c8f9837ecce4c",
+                "reference": "0f6f8abc4d241e9ce6b64992721c8f9837ecce4c",
                 "shasum": ""
             },
             "require": {
@@ -331,10 +331,10 @@
             ],
             "description": "Apple GSX PHP implementation.",
             "support": {
-                "source": "https://github.com/waggingtail-dev/package-apple-gsx/tree/v0.1.4",
+                "source": "https://github.com/waggingtail-dev/package-apple-gsx/tree/v0.1.5",
                 "issues": "https://github.com/waggingtail-dev/package-apple-gsx/issues"
             },
-            "time": "2020-02-03T00:28:22+00:00"
+            "time": "2020-02-03T02:54:54+00:00"
         }
     ],
     "packages-dev": [
