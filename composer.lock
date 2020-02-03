@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c4d2bedd3e851b52a3c7868017b4c5a2",
+    "content-hash": "8f97266f92c6eb0c8dc9e7e715180555",
     "packages": [
         {
             "name": "guzzlehttp/guzzle",
@@ -287,11 +287,17 @@
         },
         {
             "name": "waggingtail-dev/package-apple-gsx",
-            "version": "dev-master",
+            "version": "v0.1.4",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:waggingtail-dev/package-apple-gsx.git",
+                "reference": "671c2b5357be9164d61533c6864c31708a18759e"
+            },
             "dist": {
-                "type": "path",
-                "url": "../package-apple-gsx",
-                "reference": "f100d2932e1b50bd796a99a430e9c73d8c19d4cc"
+                "type": "zip",
+                "url": "https://api.github.com/repos/waggingtail-dev/package-apple-gsx/zipball/671c2b5357be9164d61533c6864c31708a18759e",
+                "reference": "671c2b5357be9164d61533c6864c31708a18759e",
+                "shasum": ""
             },
             "require": {
                 "ext-json": "*",
@@ -323,7 +329,12 @@
                     "homepage": "https://waggingtail.co"
                 }
             ],
-            "description": "Apple GSX PHP implementation."
+            "description": "Apple GSX PHP implementation.",
+            "support": {
+                "source": "https://github.com/waggingtail-dev/package-apple-gsx/tree/v0.1.4",
+                "issues": "https://github.com/waggingtail-dev/package-apple-gsx/issues"
+            },
+            "time": "2020-02-03T00:28:22+00:00"
         }
     ],
     "packages-dev": [
@@ -4613,9 +4624,7 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "waggingtail-dev/package-apple-gsx": 20
-    },
+    "stability-flags": [],
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
