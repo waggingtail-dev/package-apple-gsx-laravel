@@ -56,6 +56,7 @@ class AppleGsxServiceProvider extends ServiceProvider
             $config = $app['config']->get('applegsx');
 
             [
+                'apple_id' => $appleUserId,
                 'sold_to' => $soldTo,
                 'ship_to' => $shipTo,
                 'pass_phrase' => $passPhrase,
@@ -64,7 +65,7 @@ class AppleGsxServiceProvider extends ServiceProvider
 
             $caBundlePath = storage_path($config['ca_bundle_path']);
 
-            return new AppleGsx($soldTo, $shipTo, $caBundlePath, $passPhrase, $useUat);
+            return new AppleGsx($appleUserId, $soldTo, $shipTo, $caBundlePath, $passPhrase, $useUat);
         });
 
         $this->app->alias('applegsx', AppleGsx::class);
