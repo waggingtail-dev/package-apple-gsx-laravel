@@ -7,6 +7,7 @@ Apple GSX PHP Library
 
 ```php
 // .env file
+APPLE_GSX_APPLE_USER_ID=appleid@sample.com
 APPLE_GSX_SOLD_TO=01234567
 APPLE_GSX_SHIP_TO=01234567
 // this will resolve to storage_path, e.g. certbundle.pem => storage_path('certbundle.pem')
